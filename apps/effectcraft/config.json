@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "urn": "tipi://effectcraft",
+  "name": "EffectCraft",
+  "id": "effectcraft",
+  "available": true,
+  "short_desc": "Motion graphics and visual effects.",
+  "author": "ArtCraft (storytold)",
+  "port": 8906,
+  "categories": [
+    "media"
+  ],
+  "description": "EffectCraft is an open-source motion graphics and compositing tool: compositions, layers, keyframes, hundreds of effects, expressions, 3D cameras and lights, and a render queue, written from scratch in Rust.",
+  "tipi_version": 1,
+  "version": "0.24.1",
+  "source": "https://github.com/storytold/effectcraft",
+  "website": "https://getartcraft.com/apps/effectcraft",
+  "exposable": true,
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "created_at": 1794672953521,
+  "updated_at": 1794672953521,
+  "dynamic_config": true,
+  "form_fields": []
+}

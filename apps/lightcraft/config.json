@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "urn": "tipi://lightcraft",
+  "name": "LightCraft",
+  "id": "lightcraft",
+  "available": true,
+  "short_desc": "Photo library and raw development.",
+  "author": "ArtCraft (storytold)",
+  "port": 8904,
+  "categories": [
+    "photography"
+  ],
+  "description": "LightCraft is an open-source photo library and raw developer, written from scratch in Rust.",
+  "tipi_version": 1,
+  "version": "0.21.1",
+  "source": "https://github.com/storytold/lightcraft",
+  "website": "https://getartcraft.com/apps/lightcraft",
+  "exposable": true,
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "created_at": 1794672953521,
+  "updated_at": 1794672953521,
+  "dynamic_config": true,
+  "form_fields": []
+}

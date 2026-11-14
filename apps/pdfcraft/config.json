@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "urn": "tipi://pdfcraft",
+  "name": "PdfCraft",
+  "id": "pdfcraft",
+  "available": true,
+  "short_desc": "Read, organize, combine, split and protect PDFs.",
+  "author": "ArtCraft (storytold)",
+  "port": 8905,
+  "categories": [
+    "utilities",
+    "books"
+  ],
+  "description": "PdfCraft is an open-source PDF tool for reading, organizing, combining, splitting and protecting PDF files, written from scratch in Rust.",
+  "tipi_version": 1,
+  "version": "0.21.1",
+  "source": "https://github.com/storytold/pdfcraft",
+  "website": "https://getartcraft.com/apps/pdfcraft",
+  "exposable": true,
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "created_at": 1794672953521,
+  "updated_at": 1794672953521,
+  "dynamic_config": true,
+  "form_fields": []
+}

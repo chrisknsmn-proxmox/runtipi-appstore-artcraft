@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "urn": "tipi://designcraft",
+  "name": "DesignCraft",
+  "id": "designcraft",
+  "available": true,
+  "short_desc": "Page layout and publishing.",
+  "author": "ArtCraft (storytold)",
+  "port": 8907,
+  "categories": [
+    "media",
+    "books"
+  ],
+  "description": "DesignCraft is an open-source page layout and publishing app, written from scratch in Rust.",
+  "tipi_version": 1,
+  "version": "0.20.1",
+  "source": "https://github.com/storytold/designcraft",
+  "website": "https://getartcraft.com/apps/designcraft",
+  "exposable": true,
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "created_at": 1794672953521,
+  "updated_at": 1794672953521,
+  "dynamic_config": true,
+  "form_fields": []
+}

@@ -1,0 +1,89 @@
+# GridCraft for Runtipi: the official browser build of GridCraft (storytold/gridcraft), served by nginx.
+# Generated from crafts.json by scripts/generate.ts. Edit the template or crafts.json, not this file.
+#
+# On the first start after an install or update, the container downloads the release's web zip
+# from GitHub, checks it against the SHA-256 pinned below, unpacks it into ${APP_DATA_DIR}/data/site,
+# and serves it. Later starts reuse the unpacked copy. The app runs entirely in the browser; the
+# server only hands out files.
+x-runtipi:
+  schema_version: 2
+  overrides: []
+
+services:
+  gridcraft:
+    image: nginx:1.30.6-alpine
+    environment:
+      CRAFT_NAME: "GridCraft"
+      CRAFT_VERSION: "0.19.1"
+      CRAFT_URL: "https://github.com/storytold/gridcraft/releases/download/v0.19.1/gridcraft-web-0.19.1.zip"
+      CRAFT_SHA256: "48c5d1b101befebb3c5ba3b7a14914f01c3207934813ed07dc4251b7ae116a78"
+    volumes:
+      - ${APP_DATA_DIR}/data/site:/site
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        set -eu
+        site="/site/$$CRAFT_VERSION"
+        if [ ! -f "$$site/.complete" ]; then
+          echo "Downloading $$CRAFT_NAME $$CRAFT_VERSION from $$CRAFT_URL"
+          rm -rf /site/.download
+          mkdir -p /site/.download/unpacked
+          wget -q -O /site/.download/web.zip "$$CRAFT_URL"
+          echo "$$CRAFT_SHA256  /site/.download/web.zip" | sha256sum -c -
+          unzip -q /site/.download/web.zip -d /site/.download/unpacked
+          root=/site/.download/unpacked
+          # The release zips hold a single folder, e.g. effectcraft-web-0.24.1/.
+          if [ ! -f "$$root/index.html" ] && [ "$$(ls -A "$$root" | wc -l)" -eq 1 ]; then
+            root="$$root/$$(ls -A "$$root")"
+          fi
+          if [ ! -f "$$root/index.html" ]; then
+            echo "The release has no index.html" >&2
+            exit 1
+          fi
+          # Compress the large files once, for nginx's gzip_static.
+          find "$$root" -type f \( -name '*.wasm' -o -name '*.js' -o -name '*.html' \) \
+            -exec sh -c 'gzip -6 -c "$$1" > "$$1.gz"' _ {} \;
+          rm -rf "$$site"
+          mv "$$root" "$$site"
+          touch "$$site/.complete"
+          rm -rf /site/.download
+          # Remove earlier versions' files.
+          for old in /site/*; do
+            if [ "$$old" != "$$site" ]; then rm -rf "$$old"; fi
+          done
+          echo "Installed $$CRAFT_NAME $$CRAFT_VERSION"
+        fi
+        cat > /etc/nginx/conf.d/default.conf <<'EOF'
+        server {
+          listen 8080;
+          root SITE_ROOT;
+          index index.html;
+          absolute_redirect off;
+          gzip_static on;
+          # File names stay the same between releases, so browsers must revalidate every file.
+          add_header Cache-Control "no-cache" always;
+          add_header X-Content-Type-Options "nosniff" always;
+
+          location / {
+            try_files $$uri $$uri/ =404;
+          }
+          location ~* \.wasm$$ {
+            default_type application/wasm;
+          }
+          location ~* \.webmanifest$$ {
+            default_type application/manifest+json;
+          }
+        }
+        EOF
+        sed -i "s#SITE_ROOT#$$site#" /etc/nginx/conf.d/default.conf
+        exec nginx -g 'daemon off;'
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:8080/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      # The first start downloads and unpacks the release.
+      start_period: 10m
+    x-runtipi:
+      is_main: true
+      internal_port: 8080

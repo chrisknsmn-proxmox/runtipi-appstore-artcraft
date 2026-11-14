@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "urn": "tipi://photocraft",
+  "name": "PhotoCraft",
+  "id": "photocraft",
+  "available": true,
+  "short_desc": "Image editing with layers, masks, type and real PSD files.",
+  "author": "ArtCraft (storytold)",
+  "port": 8901,
+  "categories": [
+    "photography",
+    "media"
+  ],
+  "description": "PhotoCraft is an open-source image editor that feels familiar to anyone who has used a professional photo editor: layers, masks, adjustments, type and real PSD files, written from scratch in Rust.",
+  "tipi_version": 1,
+  "version": "0.23.1",
+  "source": "https://github.com/storytold/photocraft",
+  "website": "https://getartcraft.com/apps/photocraft",
+  "exposable": true,
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "created_at": 1794672953521,
+  "updated_at": 1794672953521,
+  "dynamic_config": true,
+  "form_fields": []
+}

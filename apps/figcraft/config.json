@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "urn": "tipi://figcraft",
+  "name": "FigCraft",
+  "id": "figcraft",
+  "available": true,
+  "short_desc": "Interface design and prototyping.",
+  "author": "ArtCraft (storytold)",
+  "port": 8908,
+  "categories": [
+    "development"
+  ],
+  "description": "FigCraft is an open-source interface design and prototyping tool, written from scratch in Rust.",
+  "tipi_version": 1,
+  "version": "0.18.1",
+  "source": "https://github.com/storytold/figcraft",
+  "website": "https://getartcraft.com/apps/figcraft",
+  "exposable": true,
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "created_at": 1794672953521,
+  "updated_at": 1794672953521,
+  "dynamic_config": true,
+  "form_fields": []
+}

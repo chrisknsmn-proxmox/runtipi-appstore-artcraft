@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "urn": "tipi://vectorcraft",
+  "name": "VectorCraft",
+  "id": "vectorcraft",
+  "available": true,
+  "short_desc": "Vector illustration.",
+  "author": "ArtCraft (storytold)",
+  "port": 8902,
+  "categories": [
+    "media"
+  ],
+  "description": "VectorCraft is an open-source vector illustration app, written from scratch in Rust.",
+  "tipi_version": 1,
+  "version": "0.24.1",
+  "source": "https://github.com/storytold/vectorcraft",
+  "website": "https://getartcraft.com/apps/vectorcraft",
+  "exposable": true,
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "created_at": 1794672953521,
+  "updated_at": 1794672953521,
+  "dynamic_config": true,
+  "form_fields": []
+}

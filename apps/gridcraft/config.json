@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "urn": "tipi://gridcraft",
+  "name": "GridCraft",
+  "id": "gridcraft",
+  "available": true,
+  "short_desc": "Spreadsheets and data analysis.",
+  "author": "ArtCraft (storytold)",
+  "port": 8915,
+  "categories": [
+    "data",
+    "utilities"
+  ],
+  "description": "GridCraft is an open-source spreadsheet and data analysis app, written from scratch in Rust.",
+  "tipi_version": 1,
+  "version": "0.19.1",
+  "source": "https://github.com/storytold/gridcraft",
+  "website": "https://getartcraft.com/apps/gridcraft",
+  "exposable": true,
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "created_at": 1794672953521,
+  "updated_at": 1794672953521,
+  "dynamic_config": true,
+  "form_fields": []
+}

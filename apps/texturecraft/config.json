@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "urn": "tipi://texturecraft",
+  "name": "TextureCraft",
+  "id": "texturecraft",
+  "available": true,
+  "short_desc": "3D texture painting.",
+  "author": "ArtCraft (storytold)",
+  "port": 8909,
+  "categories": [
+    "media",
+    "gaming"
+  ],
+  "description": "TextureCraft is an open-source 3D texture painting app, written from scratch in Rust.",
+  "tipi_version": 1,
+  "version": "0.6.1",
+  "source": "https://github.com/storytold/texturecraft",
+  "website": "https://getartcraft.com/apps/texturecraft",
+  "exposable": true,
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "created_at": 1794672953521,
+  "updated_at": 1794672953521,
+  "dynamic_config": true,
+  "form_fields": []
+}

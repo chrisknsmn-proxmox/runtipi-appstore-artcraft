@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "urn": "tipi://cadcraft",
+  "name": "CADCraft",
+  "id": "cadcraft",
+  "available": true,
+  "short_desc": "Computer-aided design and drafting.",
+  "author": "ArtCraft (storytold)",
+  "port": 8914,
+  "categories": [
+    "utilities"
+  ],
+  "description": "CADCraft is an open-source computer-aided design and drafting app, written from scratch in Rust.",
+  "tipi_version": 1,
+  "version": "0.20.1",
+  "source": "https://github.com/storytold/cadcraft",
+  "website": "https://getartcraft.com/apps/cadcraft",
+  "exposable": true,
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "created_at": 1794672953521,
+  "updated_at": 1794672953521,
+  "dynamic_config": true,
+  "form_fields": []
+}

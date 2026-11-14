@@ -1,0 +1,282 @@
+{
+  "apps": [
+    {
+      "id": "photocraft",
+      "name": "PhotoCraft",
+      "repo": "storytold/photocraft",
+      "tag": "v0.23.1",
+      "asset": "photocraft-web-0.23.1.zip",
+      "sha256": "3a498eb517bca6cec89f9c6b1fc6448269a05428c8a3a4637c16817da157f03c",
+      "port": 8901,
+      "short_desc": "Image editing with layers, masks, type and real PSD files.",
+      "description": "PhotoCraft is an open-source image editor that feels familiar to anyone who has used a professional photo editor: layers, masks, adjustments, type and real PSD files, written from scratch in Rust.",
+      "categories": [
+        "photography",
+        "media"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    },
+    {
+      "id": "vectorcraft",
+      "name": "VectorCraft",
+      "repo": "storytold/vectorcraft",
+      "tag": "v0.24.1",
+      "asset": "vectorcraft-web-0.24.1.zip",
+      "sha256": "de31befd175476f252e3563b4b1fdc6c887d5842b33fb7d1f5fdf007dc7633aa",
+      "port": 8902,
+      "short_desc": "Vector illustration.",
+      "description": "VectorCraft is an open-source vector illustration app, written from scratch in Rust.",
+      "categories": [
+        "media"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    },
+    {
+      "id": "filmcraft",
+      "name": "FilmCraft",
+      "repo": "storytold/filmcraft",
+      "tag": "v0.20.1",
+      "asset": "filmcraft-web-0.20.1.zip",
+      "sha256": "1cf3072e3f3b6535fcd024d6f6ab2a16cf7776345d868037dc630de0ad0dbbb8",
+      "port": 8903,
+      "short_desc": "Video editing, color and sound.",
+      "description": "FilmCraft is an open-source video editor for cutting, color and sound, written from scratch in Rust.",
+      "categories": [
+        "media"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    },
+    {
+      "id": "lightcraft",
+      "name": "LightCraft",
+      "repo": "storytold/lightcraft",
+      "tag": "v0.21.1",
+      "asset": "lightcraft-web-0.21.1.zip",
+      "sha256": "57147383a46eaab3b0cc036acf9443b221450c6a19f5dc303ae165bb9678b8cb",
+      "port": 8904,
+      "short_desc": "Photo library and raw development.",
+      "description": "LightCraft is an open-source photo library and raw developer, written from scratch in Rust.",
+      "categories": [
+        "photography"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    },
+    {
+      "id": "pdfcraft",
+      "name": "PdfCraft",
+      "repo": "storytold/pdfcraft",
+      "tag": "v0.21.1",
+      "asset": "pdfcraft-web-0.21.1.zip",
+      "sha256": "fe9708d46af191aebb56f70eb32cf8b112b0b9452d17ae6ba3a8c4a8665fe748",
+      "port": 8905,
+      "short_desc": "Read, organize, combine, split and protect PDFs.",
+      "description": "PdfCraft is an open-source PDF tool for reading, organizing, combining, splitting and protecting PDF files, written from scratch in Rust.",
+      "categories": [
+        "utilities",
+        "books"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    },
+    {
+      "id": "effectcraft",
+      "name": "EffectCraft",
+      "repo": "storytold/effectcraft",
+      "tag": "v0.24.1",
+      "asset": "effectcraft-web-0.24.1.zip",
+      "sha256": "8adc985f345d73207abc69a27938905aba1729b63c6c9b332d0244a7567424f1",
+      "port": 8906,
+      "short_desc": "Motion graphics and visual effects.",
+      "description": "EffectCraft is an open-source motion graphics and compositing tool: compositions, layers, keyframes, hundreds of effects, expressions, 3D cameras and lights, and a render queue, written from scratch in Rust.",
+      "categories": [
+        "media"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    },
+    {
+      "id": "designcraft",
+      "name": "DesignCraft",
+      "repo": "storytold/designcraft",
+      "tag": "v0.20.1",
+      "asset": "designcraft-web-0.20.1.zip",
+      "sha256": "50fb2bebce1f48065318953393626b84b25cd1736c556e523275dadc46ae6906",
+      "port": 8907,
+      "short_desc": "Page layout and publishing.",
+      "description": "DesignCraft is an open-source page layout and publishing app, written from scratch in Rust.",
+      "categories": [
+        "media",
+        "books"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    },
+    {
+      "id": "figcraft",
+      "name": "FigCraft",
+      "repo": "storytold/figcraft",
+      "tag": "v0.18.1",
+      "asset": "figcraft-web-0.18.1.zip",
+      "sha256": "2fbeb93f5022b0a7cc9d8528f1ed7e2b54c94d213ef79e65128aa898c399f02b",
+      "port": 8908,
+      "short_desc": "Interface design and prototyping.",
+      "description": "FigCraft is an open-source interface design and prototyping tool, written from scratch in Rust.",
+      "categories": [
+        "development"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    },
+    {
+      "id": "texturecraft",
+      "name": "TextureCraft",
+      "repo": "storytold/texturecraft",
+      "tag": "v0.6.1",
+      "asset": "texturecraft-web-0.6.1.zip",
+      "sha256": "6dea6a9f77a161cba3258ab4c6db591bdb4dd32b7385d16a7db997ab671a5f3b",
+      "port": 8909,
+      "short_desc": "3D texture painting.",
+      "description": "TextureCraft is an open-source 3D texture painting app, written from scratch in Rust.",
+      "categories": [
+        "media",
+        "gaming"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    },
+    {
+      "id": "materialcraft",
+      "name": "MaterialCraft",
+      "repo": "storytold/materialcraft",
+      "tag": "v0.4.1",
+      "asset": "materialcraft-web-0.4.1.zip",
+      "sha256": "73b8c319881fd7218737d30b5eeb033801a17427bcf3d31920da32a1fbb1ffec",
+      "port": 8910,
+      "short_desc": "Node-based procedural materials.",
+      "description": "MaterialCraft is an open-source, node-based procedural material creator, written from scratch in Rust.",
+      "categories": [
+        "media",
+        "gaming"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    },
+    {
+      "id": "soundcraft",
+      "name": "SoundCraft",
+      "repo": "storytold/soundcraft",
+      "tag": "v0.20.1",
+      "asset": "soundcraft-web-0.20.1.zip",
+      "sha256": "ca7c03c53cf4b7ec9ae26ef2cbde5d86566d006127040fe694fb95f9773a34e4",
+      "port": 8911,
+      "short_desc": "Audio recording, editing and mixing.",
+      "description": "SoundCraft is an open-source digital audio workstation for recording, editing and mixing, written from scratch in Rust.",
+      "categories": [
+        "music"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    },
+    {
+      "id": "wordcraft",
+      "name": "WordCraft",
+      "repo": "storytold/wordcraft",
+      "tag": "v0.18.1",
+      "asset": "wordcraft-web-0.18.1.zip",
+      "sha256": "3daa7c2d1f209a7eeb2527fcefa3fe31e875848fb1970d68f54edae55fe0bc9f",
+      "port": 8912,
+      "short_desc": "Word processing and documents.",
+      "description": "WordCraft is an open-source word processor, written from scratch in Rust.",
+      "categories": [
+        "utilities"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    },
+    {
+      "id": "deckcraft",
+      "name": "DeckCraft",
+      "repo": "storytold/deckcraft",
+      "tag": "v0.18.1",
+      "asset": "deckcraft-web-0.18.1.zip",
+      "sha256": "3196e537fcfab538aaa2e88584bc74e29bb584459b916ab584ac22fbafe32db5",
+      "port": 8913,
+      "short_desc": "Presentations and slide decks.",
+      "description": "DeckCraft is an open-source tool for building and presenting slide decks, written from scratch in Rust.",
+      "categories": [
+        "utilities"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    },
+    {
+      "id": "cadcraft",
+      "name": "CADCraft",
+      "repo": "storytold/cadcraft",
+      "tag": "v0.20.1",
+      "asset": "cadcraft-web-0.20.1.zip",
+      "sha256": "300e870c50b66d371055915ba95e3ddbfd4c45431466d5214743b5dcab95a0e1",
+      "port": 8914,
+      "short_desc": "Computer-aided design and drafting.",
+      "description": "CADCraft is an open-source computer-aided design and drafting app, written from scratch in Rust.",
+      "categories": [
+        "utilities"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    },
+    {
+      "id": "gridcraft",
+      "name": "GridCraft",
+      "repo": "storytold/gridcraft",
+      "tag": "v0.19.1",
+      "asset": "gridcraft-web-0.19.1.zip",
+      "sha256": "48c5d1b101befebb3c5ba3b7a14914f01c3207934813ed07dc4251b7ae116a78",
+      "port": 8915,
+      "short_desc": "Spreadsheets and data analysis.",
+      "description": "GridCraft is an open-source spreadsheet and data analysis app, written from scratch in Rust.",
+      "categories": [
+        "data",
+        "utilities"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    },
+    {
+      "id": "craft-anything",
+      "name": "Craft Anything",
+      "repo": "storytold/craft-anything",
+      "tag": "v0.6.1",
+      "asset": "craft-anything-web-0.6.1.zip",
+      "sha256": "e87273b5c0181785ce9059f5348353be44e18b4ba6485203babc26ef17f71d84",
+      "port": 8916,
+      "short_desc": "See how any software works, then build your own (early alpha).",
+      "description": "Craft Anything is a tool for exploring how software works and building your own version of it. It is in early alpha.",
+      "categories": [
+        "development"
+      ],
+      "tipi_version": 1,
+      "created_at": 1794672953521,
+      "updated_at": 1794672953521
+    }
+  ]
+}

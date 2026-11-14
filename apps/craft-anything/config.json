@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "urn": "tipi://craft-anything",
+  "name": "Craft Anything",
+  "id": "craft-anything",
+  "available": true,
+  "short_desc": "See how any software works, then build your own (early alpha).",
+  "author": "ArtCraft (storytold)",
+  "port": 8916,
+  "categories": [
+    "development"
+  ],
+  "description": "Craft Anything is a tool for exploring how software works and building your own version of it. It is in early alpha.",
+  "tipi_version": 1,
+  "version": "0.6.1",
+  "source": "https://github.com/storytold/craft-anything",
+  "website": "https://getartcraft.com/apps/craft-anything",
+  "exposable": true,
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "created_at": 1794672953521,
+  "updated_at": 1794672953521,
+  "dynamic_config": true,
+  "form_fields": []
+}
