@@ -13,9 +13,21 @@ WebGPU, the clipboard and offline support only work in a **secure context**: HTT
 - **Expose the app on a domain** in Runtipi, with a valid certificate.
 - **LAN without HTTPS:** in Chrome, Edge or Brave, open `chrome://flags/#unsafely-treat-insecure-origin-as-secure`, add `http://<server-ip>:@@PORT@@` (separate several addresses with commas), set it to **Enabled** and relaunch the browser. Do this on each device you use.
 
+### Saving to real files (Chrome, Edge, Brave)
+
+On its own, the browser version downloads a new file every time you save. This store adds a small script, **Save in place**, that changes that in Chrome, Edge and Brave:
+
+- **Open** a file with the app's Open command, or drop it on the page, and **Save** writes your changes back into that file.
+- The **first save** of a new document asks where to save it. Every later save goes into the same file, with no dialog and no download.
+- If the app saves under a different name than the file you opened, the save dialog opens on that file. Press Enter and confirm **Replace** once.
+- After each save, a note in the corner offers **Undo** (put the file's previous contents back) and **Save elsewhere…**.
+- After you reload the page, the browser asks once for permission to edit the file again. Choose "Allow on every visit" to stop it asking.
+
+@@SAVE_NOTE@@Files on a network share, such as a folder on your server's drive connected in Finder, work the same way. Firefox and Safari don't support this, so there the app keeps downloading. To turn it off, set **Save in place** off in the app's settings. The script is part of this store, not of @@NAME@@.
+
 ### Where your work is saved
 
-Projects, settings and imported media are kept in **your browser's own storage** on the device you're using, not on the server. Each browser and device has its own copy, and clearing the site's data in the browser deletes it. To keep or move work, save or export files from the app to your computer.
+Projects, settings and imported media you haven't saved to a file are kept in **your browser's own storage** on the device you're using, not on the server. Each browser and device has its own copy, and clearing the site's data in the browser deletes it.
 
 ### Links
 

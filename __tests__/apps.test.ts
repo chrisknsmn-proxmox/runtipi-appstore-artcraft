@@ -141,3 +141,19 @@ describe("each app should pin its web build to a GitHub release and checksum", a
     })
   }
 })
+
+describe("the save-in-place script", () => {
+  test("parses as a classic script", () => {
+    const source = fs.readFileSync(path.join(process.cwd(), 'shim', 'savehere.js'), 'utf8')
+    expect(() => new Function(source)).not.toThrow()
+  })
+
+  test("is embedded, unchanged, in every app", async () => {
+    const source = fs.readFileSync(path.join(process.cwd(), 'shim', 'savehere.js'), 'utf8')
+    for (const app of await getApps()) {
+      const parsed = yaml.load((await getFile(app, 'docker-compose.yml')) || '') as { services?: Record<string, CraftService> }
+      const b64 = parsed.services?.[app]?.environment?.SAVEHERE_JS_B64 ?? ''
+      expect(Buffer.from(b64, 'base64').toString('utf8')).toBe(source)
+    }
+  })
+})

@@ -51,6 +51,24 @@ The apps run entirely in the browser on WebGPU (or WebGL2), so the server only h
 
 - **Work is saved in the browser, not on the server.** Projects, settings and imported media live in each browser's own storage (OPFS or IndexedDB). Clearing the site's data deletes them. Save or export files you want to keep.
 
+## Save in place
+
+On their own, the browser builds save and export by downloading a new file every time. [`shim/savehere.js`](shim/savehere.js) fixes that in Chrome, Edge and Brave, using the File System Access API. Every container start writes the script next to the app and loads it first in `index.html`. Each app's **Save in place** setting (`CRAFT_SAVE_IN_PLACE`, on by default) turns it off.
+
+- **Downloads:** every app saves by clicking a hidden `<a download href="blob:…">`. The script catches the click and writes the blob into a remembered `FileSystemFileHandle`. A name it doesn't know opens `showSaveFilePicker` once. If a file of the same type was opened in that session, the picker opens on that file.
+- **Opening:** the apps' file fields (`<input type="file">`, mostly behind `rfd`'s card) go through `showOpenFilePicker` instead, and dropped files are read with `getAsFileSystemHandle`. Either way the handle is remembered by file name, in IndexedDB, so it survives a reload. "Untitled…" names are remembered only for the session. LightCraft and Craft Anything set `remember_opened: false`, because their opened files are inputs (photo originals, files to inspect), never save targets.
+- **Apps that call `showSaveFilePicker` themselves** (WordCraft, GridCraft) get the remembered handle back instead of a new dialog.
+- **Feedback:** each save shows a note with **Undo**, which writes back the previous contents (files up to 256 MB), and **Save elsewhere…**. When the browser wants a click before it shows a picker or asks permission, the note shows the button for it. If writing fails, it offers **Download instead**.
+- **Other browsers:** in Firefox and Safari, or outside a secure context, the script does nothing.
+
+Tested in Chrome against all 16 builds listed above, with each app's real UI. The tests ran save, save again, reload, open, then save, with the file pickers replaced by Origin Private File System handles. In the 15 apps that save, every later save went into the same file without a dialog or a download. Craft Anything's browser version has no saving, and opening works there too.
+
+App-specific behaviour seen while testing:
+- **VectorCraft** names files it opens "Untitled-N", so its first save after opening asks for a name.
+- **EffectCraft** asks for the name with a browser `prompt()`.
+- **LightCraft** needs a folder name in its Export dialog before it exports.
+- **PhotoCraft 0.23.1's** release zip is missing `app/snippets/`, so the container copies it in.
+
 ## Updating
 
 `crafts.json` lists every app with its release, web zip, SHA-256 and port. Everything in `apps/` except the logos is generated from it and `templates/`:

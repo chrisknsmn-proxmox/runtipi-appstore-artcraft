@@ -5,6 +5,8 @@
 //   bun scripts/generate.ts --check    exit 1 if any generated file is out of date (used in CI)
 //   bun scripts/generate.ts --latest   first move each app to its latest GitHub release, taking the
 //                                      web zip's SHA-256 from the release's SHA256SUMS.txt
+//   bun scripts/generate.ts --bump     raise every app's tipi_version (after changing shim/ or
+//                                      templates/), so Runtipi offers the update
 //
 // Logos (apps/<id>/metadata/logo.jpg) are committed files and aren't generated.
 import fs from 'node:fs'
@@ -22,6 +24,10 @@ type Craft = {
   short_desc: string
   description: string
   categories: string[]
+  // false: files opened in the app are inputs (a photo library's originals), never save targets
+  remember_opened?: boolean
+  // An extra paragraph for the description's "Saving to real files" section
+  save_note?: string
   tipi_version?: number
   created_at?: number
   updated_at?: number
@@ -86,7 +92,16 @@ function configFor(craft: Craft) {
     created_at: craft.created_at,
     updated_at: craft.updated_at,
     dynamic_config: true,
-    form_fields: [],
+    form_fields: [
+      {
+        type: 'boolean',
+        label: 'Save in place',
+        env_variable: 'CRAFT_SAVE_IN_PLACE',
+        default: true,
+        required: false,
+        hint: "Chrome, Edge and Brave: Save writes back into the file you opened (or chose on the first save) instead of downloading a new copy each time. Turn off to keep the app's own downloads.",
+      },
+    ],
   }
 }
 
@@ -110,9 +125,13 @@ async function main() {
   if (args.has('--latest')) {
     for (const craft of crafts) await moveToLatest(craft, now)
   }
+  if (args.has('--bump')) {
+    for (const craft of crafts) Object.assign(craft, { tipi_version: (craft.tipi_version ?? 1) + 1, updated_at: now })
+  }
 
   const composeTemplate = fs.readFileSync(path.join(root, 'templates', 'docker-compose.yml'), 'utf8')
   const descriptionTemplate = fs.readFileSync(path.join(root, 'templates', 'description.md'), 'utf8')
+  const saveHereB64 = Buffer.from(fs.readFileSync(path.join(root, 'shim', 'savehere.js'))).toString('base64')
 
   const outputs = new Map<string, string>()
   outputs.set(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`)
@@ -128,6 +147,9 @@ async function main() {
       SHA256: craft.sha256,
       PORT: String(craft.port),
       DESCRIPTION: craft.description,
+      REMEMBER_OPENED: String(craft.remember_opened ?? true),
+      SAVE_NOTE: craft.save_note ? `${craft.save_note}\n\n` : '',
+      SAVEHERE_B64: saveHereB64,
     }
     const dir = path.join(root, 'apps', craft.id)
     outputs.set(path.join(dir, 'config.json'), `${JSON.stringify(configFor(craft), null, 2)}\n`)

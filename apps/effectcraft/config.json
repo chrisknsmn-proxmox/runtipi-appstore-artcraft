@@ -11,7 +11,7 @@
     "media"
   ],
   "description": "EffectCraft is an open-source motion graphics and compositing tool: compositions, layers, keyframes, hundreds of effects, expressions, 3D cameras and lights, and a render queue, written from scratch in Rust.",
-  "tipi_version": 1,
+  "tipi_version": 2,
   "version": "0.24.1",
   "source": "https://github.com/storytold/effectcraft",
   "website": "https://getartcraft.com/apps/effectcraft",
@@ -21,7 +21,16 @@
     "arm64"
   ],
   "created_at": 1794672953521,
-  "updated_at": 1794672953521,
+  "updated_at": 1794680640133,
   "dynamic_config": true,
-  "form_fields": []
+  "form_fields": [
+    {
+      "type": "boolean",
+      "label": "Save in place",
+      "env_variable": "CRAFT_SAVE_IN_PLACE",
+      "default": true,
+      "required": false,
+      "hint": "Chrome, Edge and Brave: Save writes back into the file you opened (or chose on the first save) instead of downloading a new copy each time. Turn off to keep the app's own downloads."
+    }
+  ]
 }

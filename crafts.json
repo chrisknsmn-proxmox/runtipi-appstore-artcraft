@@ -14,9 +14,9 @@
         "photography",
         "media"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133
     },
     {
       "id": "vectorcraft",
@@ -31,9 +31,9 @@
       "categories": [
         "media"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133
     },
     {
       "id": "filmcraft",
@@ -48,9 +48,9 @@
       "categories": [
         "media"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133
     },
     {
       "id": "lightcraft",
@@ -65,9 +65,11 @@
       "categories": [
         "photography"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133,
+      "remember_opened": false,
+      "save_note": "In LightCraft, photos you import are never written to. Saving means exporting: the first export of a photo asks where to save it, and exporting it again (for example with **File ▸ Export with Previous**) replaces that file."
     },
     {
       "id": "pdfcraft",
@@ -83,9 +85,9 @@
         "utilities",
         "books"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133
     },
     {
       "id": "effectcraft",
@@ -100,9 +102,9 @@
       "categories": [
         "media"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133
     },
     {
       "id": "designcraft",
@@ -118,9 +120,9 @@
         "media",
         "books"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133
     },
     {
       "id": "figcraft",
@@ -135,9 +137,9 @@
       "categories": [
         "development"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133
     },
     {
       "id": "texturecraft",
@@ -153,9 +155,9 @@
         "media",
         "gaming"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133
     },
     {
       "id": "materialcraft",
@@ -171,9 +173,9 @@
         "media",
         "gaming"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133
     },
     {
       "id": "soundcraft",
@@ -188,9 +190,9 @@
       "categories": [
         "music"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133
     },
     {
       "id": "wordcraft",
@@ -205,9 +207,9 @@
       "categories": [
         "utilities"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133
     },
     {
       "id": "deckcraft",
@@ -222,9 +224,9 @@
       "categories": [
         "utilities"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133
     },
     {
       "id": "cadcraft",
@@ -239,9 +241,9 @@
       "categories": [
         "utilities"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133
     },
     {
       "id": "gridcraft",
@@ -257,9 +259,9 @@
         "data",
         "utilities"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133
     },
     {
       "id": "craft-anything",
@@ -274,9 +276,11 @@
       "categories": [
         "development"
       ],
-      "tipi_version": 1,
+      "tipi_version": 2,
       "created_at": 1794672953521,
-      "updated_at": 1794672953521
+      "updated_at": 1794680640133,
+      "remember_opened": false,
+      "save_note": "Craft Anything's browser version doesn't save or export files, so here the script only changes how files are opened. It never writes into a file you inspect."
     }
   ]
 }
